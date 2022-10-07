@@ -1,0 +1,69 @@
+import React, { Component } from 'react'
+import { Text,View,StatusBar,Image,TouchableOpacity } from 'react-native'
+
+class App extends Component{
+  constructor (props) {
+    super(props);
+    this.state = {};
+  }
+  render (){
+    return (
+
+      <View 
+      style={{
+        backgroundColor:'#31C6D4',
+        flex:1,
+        //alignItems:'center',
+      }}>
+        <StatusBar
+          barStyle='dark-content'
+          backgroundColor='#FBF2CF'
+        />
+
+        <Text
+        style={{
+          fontSize:40,
+          backgroundColor:'#C3F8FF',
+          fontWeight:'bold'
+        }}>Hello world</Text>
+
+        <Image
+        source={require('./img/gunung.jpg')}
+        style={{width:180, height:280}}
+        resizeMode= 'center'
+        />
+
+        <Image
+        source={{uri:'https://images.unsplash.com/photo-1664369451273-2a65ba98794d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}}
+        style={{width:180, height:280}}
+        resizeMode= 'stretch'
+        />
+
+        <TouchableOpacity
+        style={{
+            backgroundColor: '#EEEEEE',
+            paddingVertical:20,
+            justifyContent:'center',
+            alignItems:'center',
+            marginTop:20,
+            marginHorizontal:20,
+            borderRadius:50,
+            elevation:20,
+        }}>
+        <Text
+          style={{
+          fontSize:20,
+        
+          fontWeight:'bold'
+        }}>Klik Disini</Text>
+        
+        </TouchableOpacity>
+
+        
+      </View>
+
+    )
+  }
+}
+
+export default App;
